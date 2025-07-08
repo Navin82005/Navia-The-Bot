@@ -21,7 +21,7 @@ Navya AI is a lightweight, privacy-friendly chatbot framework powered by [GROQ's
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/navya-ai.git
-cd navya-ai
+cd navyathebot
 ```
 
 ### 2. Install Dependencies
@@ -32,6 +32,14 @@ pip install -r requirements.txt
 
 ### 3. Run the Setup Wizard
 
+```bash
+navya init
+```
+<or>
+```bash
+.\navya init
+```
+<or>
 ```bash
 python setup.py
 ```
