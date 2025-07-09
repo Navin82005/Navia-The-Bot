@@ -33,10 +33,20 @@ pip install -r requirements.txt
 ### 3. Run the Setup Wizard
 
 ```bash
+<<<<<<< HEAD
 navia init
 # or
 .\navia init
+=======
+navya init
+```
 # or
+```bash
+.\navya init
+```
+>>>>>>> 12049e463dc53926f53e77dcc8960681702a8fce
+# or
+```bash
 python setup.py
 ```
 
