@@ -1,6 +1,6 @@
 def generate_system_prompt(config):
     name = config["name"]
-    bot_name = config.get("bot_name", "Navya")
+    bot_name = config.get("bot_name", "Navia")
     gender = config.get("bot_gender", "Assistant")
     tone = config.get("tone", "friendly")
     bio = config.get("bio", "")

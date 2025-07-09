@@ -45,7 +45,7 @@ if use_resume in ["", "y", "yes"]:
 print("==========================")
 print("   BOT IDENTITY SETUP")
 
-config["bot_name"] = input(f"🤖 Bot Name [Default: {config.get('bot_name', 'Navya')}]: ").strip() or config.get("bot_name", "Navya")
+config["bot_name"] = input(f"🤖 Bot Name [Default: {config.get('bot_name', 'Navia')}]: ").strip() or config.get("bot_name", "Navia")
 config["bot_gender"] = input(f"👤 Assistant Role/Identity [Default: {config.get('bot_gender', 'Assistant')}]: ").strip() or config.get("bot_gender", "Assistant")
 config["user_name"] = input(f"👤 Your Name [Default: {config.get('name', config.get('user_name', ''))}]: ").strip() or config.get("name", config.get("user_name", ""))
 
@@ -129,5 +129,5 @@ print(f"""
 - Keep your `.env` file safe and secret
 - Use `config.json` to customize the assistant's style and memory
 
-💖 Thank you for using Navya AI — your smart, personalized assistant!
+💖 Thank you for using Navia AI — your smart, personalized assistant!
 """)

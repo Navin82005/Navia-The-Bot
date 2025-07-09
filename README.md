@@ -1,6 +1,6 @@
-# 💬 Navya AI — Personalized Assistant Chatbot
+# 💬 Navia AI — Personalized Assistant Chatbot
 
-Navya AI is a lightweight, privacy-friendly chatbot framework powered by [GROQ's LLaMA3](https://groq.com/llama3/). It's designed to act as your personal assistant — whether a best friend, digital partner, or career guide — based solely on the persona you define during setup.
+Navia AI is a lightweight, privacy-friendly chatbot framework powered by [GROQ's LLaMA3](https://groq.com/llama3/). It's designed to act as your personal assistant — whether a best friend, digital partner, or career guide — based solely on the persona you define during setup.
 
 ---
 
@@ -20,8 +20,8 @@ Navya AI is a lightweight, privacy-friendly chatbot framework powered by [GROQ's
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/navya-ai.git
-cd navya-ai
+git clone https://github.com/YOUR_USERNAME/navia-ai.git
+cd navia-ai
 ```
 
 ### 2. Install Dependencies
@@ -33,9 +33,9 @@ pip install -r requirements.txt
 ### 3. Run the Setup Wizard
 
 ```bash
-navya init
+navia init
 # or
-.\navya init
+.\navia init
 # or
 python setup.py
 ```
@@ -70,7 +70,7 @@ Server runs at: `http://localhost:5001`
 ## 🛠️ Project Structure
 
 ```
-navya-ai/
+navia-ai/
 ├── app/
 │   ├── __init__.py         # Flask app factory
 │   ├── helper.py           # Context checks + alert logic
@@ -145,7 +145,7 @@ Control frontend access in `config.json`:
 
 ## 🛡️ Privacy Note
 
-Navya AI does **not store** conversations. All prompts are processed in-memory and securely sent to Groq’s API.
+Navia AI does **not store** conversations. All prompts are processed in-memory and securely sent to Groq’s API.
 
 ---
 
