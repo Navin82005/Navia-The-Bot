@@ -27,11 +27,12 @@ def is_out_of_context(reply: str, expected_keywords=None, forbidden_phrases=None
     expected_keywords = expected_keywords or CONFIG.get("expected_keywords", [])
     forbidden_phrases = forbidden_phrases or CONFIG.get("forbidden_phrases", [])
 
-    if not any(kw.lower() in lower_reply for kw in expected_keywords):
-        return True
+    if expected_keywords and forbidden_phrases:
+        if not any(kw.lower() in lower_reply for kw in expected_keywords):
+            return True
 
-    if any(bad.lower() in lower_reply for bad in forbidden_phrases):
-        return True
+        if any(bad.lower() in lower_reply for bad in forbidden_phrases):
+            return True
 
     return False
 

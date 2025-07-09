@@ -1,3 +1,5 @@
 # Don't forget to uncomment or add .env to gitignore file
 .env
 config.json
+venv
+__pycache__
