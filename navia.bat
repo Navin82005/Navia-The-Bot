@@ -1,9 +1,9 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-REM ===== Navya AI Setup Script (Windows) =====
+REM ===== Navia AI Setup Script (Windows) =====
 echo.
-echo Setting up Navya AI environment on Windows...
+echo Setting up Navia AI environment on Windows...
 echo.
 
 REM 1. Create virtual environment
@@ -25,7 +25,7 @@ python setup.py
 
 REM 5. Start the server
 echo.
-echo 🚀 Starting Navya AI server...
+echo 🚀 Starting Navia AI server...
 python run.py
 
 pause
