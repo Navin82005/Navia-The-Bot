@@ -32,7 +32,7 @@ def chat_with_ai():
                 {"role": "system", "content": generate_system_prompt(CONFIG)},
                 {"role": "user", "content": user_message}
             ],
-            "temperature": int(0.75 if not CONFIG.get("creativeness") else CONFIG.get("creativeness"))
+            "temperature": float(0.75 if not CONFIG.get("creativeness") else CONFIG.get("creativeness"))
         }
 
         response = requests.post(GROQ_API_URL, headers=HEADERS, json=payload)
