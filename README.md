@@ -34,9 +34,13 @@ pip install -r requirements.txt
 
 ```bash
 navya init
+```
 # or
+```bash
 .\navya init
+```
 # or
+```bash
 python setup.py
 ```
 
