@@ -20,31 +20,19 @@ Navia AI is a lightweight, privacy-friendly chatbot framework powered by [GROQ's
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/navia-ai.git
-cd navia-ai
+git clone https://github.com/Navin82005/Navia-The-Bot.git
+cd Navia-The-Bot
 ```
 
-### 2. Install Dependencies
+### 2. Run the Setup Wizard
 
 ```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the Setup Wizard
-
-```bash
-<<<<<<< HEAD
-navia init
-# or
-.\navia init
-=======
 navya init
 ```
 # or
 ```bash
 .\navya init
 ```
->>>>>>> 12049e463dc53926f53e77dcc8960681702a8fce
 # or
 ```bash
 python setup.py
@@ -55,7 +43,8 @@ This will:
 * Create a `config.json` file for assistant personality/knowledge
 * Generate a `.env` file to store API keys securely
 
-### 4. Start the Server
+### 3. Start the Server
+The setup wizard will start the server for you. If not you can run the server by:
 
 ```bash
 python run.py
@@ -115,7 +104,7 @@ POST /chat
 
 ```json
 {
-  "response": "Aww, my Naveen loves going on bike rides and listening to music! 🎶"
+  "response": "Aww, Naveen loves going on bike rides and listening to music! 🎶"
 }
 ```
 
