@@ -9,19 +9,19 @@ Navya AI is a lightweight, privacy-friendly chatbot framework powered by [GROQ's
 * 🔧 Fully configurable persona (name, tone, role, tech stack, hobbies, etc.)
 * 🤖 Powered by Groq API with LLaMA3 backend
 * 🌐 API endpoint (`/chat`) for seamless frontend integration
-* 🛡️ Out-of-context reply detection + alert email system
-* 🔒 `.env` secrets management
-* 🚀 One-command setup wizard
+* 🛡️ Out-of-context reply detection with alert email system
+* 🔐 Environment variable management using `.env`
+* ⚡ One-command setup wizard for configuration
 
 ---
 
 ## 🚀 Quick Start
 
-### 1. Clone the Repo
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/navya-ai.git
-cd navyathebot
+cd navya-ai
 ```
 
 ### 2. Install Dependencies
@@ -34,20 +34,16 @@ pip install -r requirements.txt
 
 ```bash
 navya init
-```
-### or
-```bash
+# or
 .\navya init
-```
-### or
-```bash
+# or
 python setup.py
 ```
 
 This will:
 
-* Create `config.json` with your assistant's knowledge and behavior
-* Generate `.env` to store secret keys securely
+* Create a `config.json` file for assistant personality/knowledge
+* Generate a `.env` file to store API keys securely
 
 ### 4. Start the Server
 
@@ -61,13 +57,13 @@ Server runs at: `http://localhost:5001`
 
 ## 🧠 How It Works
 
-1. The setup wizard collects user preferences, tone, knowledge, and keywords
-2. On each `/chat` request:
+1. The setup wizard collects your assistant’s persona details.
+2. On every `/chat` request:
 
-   * A system prompt is dynamically created using `prompt.py`
-   * Groq's LLaMA3 model generates the assistant's reply
-   * `helper.py` checks for forbidden phrases or off-topic responses
-   * Alerts are sent via Gmail if context is violated
+   * A system prompt is generated from `prompt.py`
+   * Groq’s LLaMA3 model provides a response
+   * `helper.py` checks for forbidden/off-topic content
+   * If triggered, an email alert is sent to the receiver
 
 ---
 
@@ -77,14 +73,14 @@ Server runs at: `http://localhost:5001`
 navya-ai/
 ├── app/
 │   ├── __init__.py         # Flask app factory
-│   ├── helper.py           # Context check + email alerts
-│   ├── prompt.py           # Dynamic system prompt
-│   ├── routes.py           # /chat route handler
-├── config.json             # Assistant knowledge/persona
-├── .env                    # API keys and Gmail creds
-├── run.py                  # Starts Flask app
-├── setup.py                # Interactive configuration wizard
-├── requirements.txt
+│   ├── helper.py           # Context checks + alert logic
+│   ├── prompt.py           # System prompt generator
+│   ├── routes.py           # Route: /chat
+├── config.json             # Assistant persona configuration
+├── .env                    # Environment secrets
+├── run.py                  # App runner
+├── setup.py                # Interactive setup wizard
+├── requirements.txt        # Dependencies
 ```
 
 ---
@@ -99,17 +95,19 @@ POST /chat
 
 ### Payload
 
-````json
+```json
 {
   "message": "What does Naveen love doing on weekends?"
 }
+```
 
 ### Response
+
 ```json
 {
   "response": "Aww, my Naveen loves going on bike rides and listening to music! 🎶"
 }
-````
+```
 
 ---
 
@@ -117,7 +115,7 @@ POST /chat
 
 Stored in `.env`:
 
-```
+```env
 GROQ_API_KEY=your_groq_key
 MONITOR_EMAIL=bot_email@gmail.com
 MONITOR_EMAIL_PASSWORD=your_app_password
@@ -128,46 +126,49 @@ ALERT_RECEIVER_EMAIL=your_email@gmail.com
 
 ## 💌 Alert System
 
-If the assistant replies out of character (missing keywords or using forbidden phrases), an email alert is triggered to the receiver email.
+If the assistant replies out of character (e.g., missing keywords, forbidden topics), an email alert will be sent to the receiver to ensure privacy and safety.
 
 ---
 
 ## ⚙️ CORS Configuration
 
-You can control allowed frontend domains in `config.json`:
+Control frontend access in `config.json`:
 
 ```json
-"cors_origins": ["http://localhost:3000", "https://your-frontend.app"]
+"cors_origins": [
+  "http://localhost:3000",
+  "https://your-frontend.app"
+]
 ```
 
 ---
 
 ## 🛡️ Privacy Note
 
-Navya AI does not store conversations. All prompts are generated in-memory and sent securely to Groq's API.
+Navya AI does **not store** conversations. All prompts are processed in-memory and securely sent to Groq’s API.
 
 ---
 
 ## 💡 Example Use Cases
 
-* Personal AI profile/portfolio bot
+* AI profile bot for personal portfolio
 * Private relationship simulator
-* Mental health journaling companion
-* Career-focused assistant for devs
+* Journaling or emotional support companion
+* Career-focused assistant for developers
 
 ---
 
 ## 📦 To-Do / Future Ideas
 
-* Optional frontend UI with React
-* Memory or conversation history
-* Role presets (e.g., friend, coach, therapist)
+* Optional React-based frontend UI
+* In-memory conversation history
+* Prebuilt role presets (friend, therapist, coach)
 
 ---
 
-## 🙋‍♂️ Contributing
+## ❗️ Contributing
 
-Pull requests are welcome! Please open issues first for any major changes.
+Pull requests are welcome! For major changes, please open an issue first to discuss your ideas.
 
 ---
 
